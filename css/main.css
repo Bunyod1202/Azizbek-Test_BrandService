@@ -128,7 +128,6 @@ header {
     header .container {
         width: 100%;
     }
-
     header {
         overflow: hidden;
     }
@@ -148,7 +147,10 @@ header {
     .nav-logo {
         /* z-index: 1; */
     }
+    .header-nav {
 
+        width: 50px;
+    }
     .header-list {
         position: absolute;
         top: 0;
@@ -185,21 +187,26 @@ header {
 
     @keyframes navOpen {
         0% {
-            transform: translateX(100%)
+           left:  150%;
+     
         }
 
         100% {
-            transform: translateX(0)
+       
+            left: 100%;
         }
     }
 
     @keyframes navClose {
         0% {
-            transform: translateX(0);
+            left: 100%;     
         }
-
+        
+        99% {
+            left: 150%;
+        }
         100% {
-            transform: translateX(100%)
+            left: -300%;
         }
     }
 }
@@ -241,6 +248,7 @@ header {
     }
 
     .open {
+  
         animation: navOpen .5s forwards ease-in-out
     }
 
